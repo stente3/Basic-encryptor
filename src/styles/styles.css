@@ -1,0 +1,36 @@
+/* Variables */
+:root {
+  --btnColor: #0a3871;
+  --bgColor: #f3f5fc;
+  --fontColor: #343a40;
+  --warningColor: #495057;
+  --regularWeight: 400;
+  --boldWeight: 700;
+}
+
+/* Responsive basic configs */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+body {
+  font-size: 16px; /* 1rem = 10px */
+  background-color: var(--bgColor);
+}
+/* Box model */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Utilities */
+.regularWeight {
+  font-weight: var(--regularWeight);
+}
+.boldWeight {
+  font-weight: var(--boldWeight);
+}
+
+/* Header */

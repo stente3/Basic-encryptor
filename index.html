@@ -4,10 +4,45 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link
+      rel="shortcut icon"
+      href="./src/images/favicon.svg"
+      type="image/x-icon"
+    />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/styles/normalize.css" />
+    <link rel="stylesheet" href="./src/styles/styles.css" />
+    <title>Alura challenge</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+    <header class="header">
+      <figure class="header__container">
+        <img src="./src/images/logo.svg" alt="favicon" />
+      </figure>
+    </header>
+    <main class="main">
+      <textarea id="main__text-area"></textarea>
+      <div class="main__warning">
+        <p>Solo letras minuscúlas y sin acentos</p>
+      </div>
+      <div class="main__buttonContainer">
+        <button class="main__button--encriptar">Encriptar</button>
+        <button class="main__button--desencriptar">Desencriptar</button>
+      </div>
+    </main>
+    <footer class="footer">
+      <h2 class="footer__header">Ningún mensaje fue encontrado</h2>
+      <p class="footer__paragraph">
+        Ingresa el texto que desees encriptar o desencriptar
+      </p>
+    </footer>
+    <script src="./src/js/script.js"></script>
   </body>
 </html>
