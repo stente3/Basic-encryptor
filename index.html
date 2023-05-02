@@ -24,12 +24,16 @@
   <body>
     <header class="header">
       <figure class="header__container">
-        <img src="./src/images/logo.svg" alt="favicon" />
+        <img src="./src/images/logo.svg" alt="Logo" title="Logo" />
       </figure>
     </header>
     <main class="main">
-      <textarea id="main__text-area"></textarea>
+      <textarea
+        id="main__text-area"
+        placeholder="Ingrese el texto aqui"
+      ></textarea>
       <div class="main__warning">
+        <img src="./src/images/warning.svg" alt="Warning" title="Warning" />
         <p>Solo letras minuscúlas y sin acentos</p>
       </div>
       <div class="main__buttonContainer">
@@ -43,6 +47,6 @@
         Ingresa el texto que desees encriptar o desencriptar
       </p>
     </footer>
-    <script src="./src/js/script.js"></script>
+    <script src="./src/js/script.js" defer></script>
   </body>
 </html>
