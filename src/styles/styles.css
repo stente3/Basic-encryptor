@@ -32,5 +32,8 @@ body {
 .boldWeight {
   font-weight: var(--boldWeight);
 }
+.hide {
+  display: none;
+}
 
 /* Header */
