@@ -17,12 +17,14 @@ html {
 body {
   font-size: 16px; /* 1rem = 10px */
   background-color: var(--bgColor);
+  padding: 2vh 2vw;
 }
 /* Box model */
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+  font-size: clamp(1.7rem, 2vw, 2rem);
 }
 
 /* Utilities */
@@ -37,3 +39,108 @@ body {
 }
 
 /* Header */
+.header__container {
+  width: 100%;
+  margin: 0 auto;
+}
+.header__container img {
+  margin: 0;
+}
+/* Main */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#main__text-area {
+  /* Elimina el borde, el padding y los márgenes */
+  border: none;
+  padding: 0;
+  margin: 8vh 0 0 0;
+
+  /* Elimina la altura automática y la hace crecer según el contenido */
+  height: auto;
+
+  /* Establece el color de fondo transparente */
+  background-color: transparent;
+
+  /* Desactiva el control de cambio de tamaño de la esquina inferior derecha */
+  resize: none;
+
+  /* Elimina el borde inferior y establece el padding inferior */
+  border-bottom: none;
+  padding-bottom: 5px;
+
+  /* Elimina la sombra del área de texto */
+  box-shadow: none;
+  width: 100%;
+  padding: 0 0 25vh 0;
+}
+#main__text-area {
+  overflow: hidden;
+}
+#main__text-area,
+#main__text-area::placeholder {
+  font-weight: var(--regularWeight);
+  font-size: clamp(3rem, 3vw, 4rem);
+  color: var(--btnColor);
+}
+.main__warning {
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  justify-content: center;
+}
+.main__warning img {
+  width: clamp(1.2em, 2vw, 1.5em);
+}
+.main__warning p {
+  margin-left: 0.5em;
+  font-size: clamp(1.7rem, 2vw, 2rem);
+}
+/* Buttons */
+.main__buttonContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.button {
+  width: 100%;
+  border: 1px solid var(--btnColor);
+  margin: 0.5em 0;
+  padding: 2.5rem;
+  background: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 2rem;
+  color: var(--btnColor);
+}
+.main__button--encrypt {
+  color: white;
+  background-color: var(--btnColor);
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2em auto;
+  padding: 1em;
+  /* box-shadow: 0px 3px 10px #c7c7c7; */
+  border-radius: 2rem;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0px 24px 32px -8px #00000014;
+}
+.footer__header {
+  font-weight: var(--boldWeight);
+  font-size: clamp(2.5rem, 2vw, 3rem);
+}
+
+.code {
+  font-size: clamp(2.5rem, 2vw, 3rem);
+  width: 100%;
+  color: var(--warningColor);
+}
