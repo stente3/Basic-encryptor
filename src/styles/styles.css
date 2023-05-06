@@ -144,3 +144,10 @@ body {
   width: 100%;
   color: var(--warningColor);
 }
+/* Tablet design */
+@media (min-width: 600px) {
+  .main__buttonContainer {
+    flex-direction: row;
+    gap: 1em;
+  }
+}
