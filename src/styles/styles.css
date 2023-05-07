@@ -85,6 +85,9 @@ body {
   font-size: clamp(3rem, 3vw, 4rem);
   color: var(--btnColor);
 }
+#main__text-area:focus {
+  outline: none;
+}
 .main__warning {
   display: flex;
   align-self: flex-start;
@@ -128,7 +131,6 @@ body {
   align-items: center;
   margin: 2em auto;
   padding: 1em;
-  /* box-shadow: 0px 3px 10px #c7c7c7; */
   border-radius: 2rem;
   text-align: center;
   background-color: white;
@@ -149,5 +151,33 @@ body {
   .main__buttonContainer {
     flex-direction: row;
     gap: 1em;
+  }
+}
+/* Desktop design */
+@media (min-width: 1340px) {
+  .main {
+    position: absolute;
+    left: 15rem;
+    width: 50vw;
+    height: 80%;
+    justify-content: space-between;
+  }
+  .main__warning {
+    margin-top: auto;
+  }
+  .footer {
+    position: absolute;
+    left: 70vw;
+    top: 0.6vh;
+    height: 90%;
+    width: 30vw;
+    width: clamp(10rem, 28vw, 45rem);
+    /* max-width: 40rem; */
+  }
+  .footer span {
+    width: 33.6rem;
+    height: 30.4rem;
+    background-image: url('../images/doll.svg');
+    background-repeat: no-repeat;
   }
 }
