@@ -6,6 +6,7 @@ const footerHeader = document.querySelector('.footer__header');
 const footerParagraph = document.querySelector('.footer__paragraph');
 const encryptionDisplay = document.querySelector('.code');
 const copyButton = document.querySelector('.copy');
+const desktopImage = document.querySelector('.footer span');
 
 // Obtener botones de encriptar y desencriptar
 const encryptionButton = document.querySelector('.main__button--encrypt');
@@ -32,6 +33,7 @@ function cleanText() {
   // Actualizar el valor del elemento textArea con el nuevo texto limpio
   textArea.value = lowercaseText;
 }
+
 /**
  * Función que codifica el texto pasado como argumento, reemplazando las vocales por valores codificados.
  * Si el texto no contiene ninguna vocal, devuelve el mismo texto sin cambios.
@@ -55,6 +57,7 @@ function encodeCode(text) {
   }
   return text;
 }
+
 /**
  * Función que decodifica el texto codificado pasado como argumento, reemplazando los valores codificados por las vocales originales.
  * Si el texto no contiene ninguno de los valores codificados, devuelve el mismo texto sin cambios.
@@ -78,9 +81,13 @@ function encryptionConfigs() {
     footerParagraph.classList.add('hide');
     encryptionDisplay.classList.remove('hide');
     copyButton.classList.remove('hide');
+    desktopImage.classList.add('hide');
   } else {
     footerHeader.classList.remove('hide');
     footerParagraph.classList.remove('hide');
+    encryptionDisplay.classList.add('hide');
+    copyButton.classList.add('hide');
+    desktopImage.classList.remove('hide');
     encryptionDisplay.textContent = '';
   }
 }
